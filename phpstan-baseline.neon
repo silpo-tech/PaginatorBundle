@@ -1,0 +1,43 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Property PaginatorBundle\\Paginator\\ExportPaginator\:\:\$limit is unused\.$#'
+			identifier: property.unused
+			count: 1
+			path: src/Paginator/ExportPaginator.php
+
+		-
+			message: '#^Call to an undefined method Symfony\\Component\\Validator\\ConstraintViolationListInterface\:\:getIterator\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Request/ValueResolver/OffsetPaginatorValueResolver.php
+
+		-
+			message: '#^Instantiated class ExceptionHandlerBundle\\Exception\\ValidationException not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Request/ValueResolver/OffsetPaginatorValueResolver.php
+
+		-
+			message: '#^Throwing object of an unknown class ExceptionHandlerBundle\\Exception\\ValidationException\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Request/ValueResolver/OffsetPaginatorValueResolver.php
+
+		-
+			message: '#^Call to an undefined method Symfony\\Component\\Validator\\ConstraintViolationListInterface\:\:getIterator\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Request/ValueResolver/PagePaginatorValueResolver.php
+
+		-
+			message: '#^Instantiated class ExceptionHandlerBundle\\Exception\\ValidationException not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Request/ValueResolver/PagePaginatorValueResolver.php
+
+		-
+			message: '#^Throwing object of an unknown class ExceptionHandlerBundle\\Exception\\ValidationException\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Request/ValueResolver/PagePaginatorValueResolver.php
