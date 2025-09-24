@@ -24,6 +24,5 @@ class ConfigurationTest extends TestCase
         $this->assertTrue($containerBuilder->hasDefinition(OffsetPaginatorValueResolver::class));
         $this->assertTrue($containerBuilder->hasDefinition(PagePaginatorValueResolver::class));
         $this->assertTrue($containerBuilder->hasParameter('paginator_defaults_limit'));
-
     }
 }

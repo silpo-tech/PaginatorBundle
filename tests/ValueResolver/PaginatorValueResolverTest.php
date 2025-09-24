@@ -5,9 +5,7 @@ declare(strict_types=1);
 namespace App\Tests\ValueResolver;
 
 use PaginatorBundle\Paginator\OffsetPaginator;
-use PaginatorBundle\Paginator\PagePaginator;
 use PaginatorBundle\Request\ValueResolver\OffsetPaginatorValueResolver;
-use PaginatorBundle\Request\ValueResolver\PagePaginatorValueResolver;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpFoundation\Request;
@@ -57,7 +55,7 @@ class PaginatorValueResolverTest extends TestCase
             'defaultLimit' => 50,
             'requestParams' => [
                 'limit' => 20,
-                'offset' => 10
+                'offset' => 10,
             ],
             'expectedLimit' => 20,
             'expectedOffset' => 10,

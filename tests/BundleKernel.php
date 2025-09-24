@@ -19,6 +19,6 @@ class BundleKernel extends Kernel
 
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load(__DIR__ . '/../src/Resources/config/services.yml');
+        $loader->load(__DIR__.'/../src/Resources/config/services.yml');
     }
 }
