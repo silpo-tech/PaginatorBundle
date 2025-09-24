@@ -1,7 +1,7 @@
 # Paginator Bundle for Symfony Framework #
 
 [![CI](https://github.com/silpo-tech/PaginatorBundle/actions/workflows/ci.yml/badge.svg)](https://github.com/silpo-tech/PaginatorBundle/actions)
-[![codecov](https://codecov.io/gh/silpo-tech/PagiratorBundle/graph/badge.svg)](https://codecov.io/gh/silpo-tech/PagiratorBundle)
+[![codecov](https://codecov.io/gh/silpo-tech/PaginatorBundle/graph/badge.svg)](https://codecov.io/gh/silpo-tech/PaginatorBundle)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation ##
