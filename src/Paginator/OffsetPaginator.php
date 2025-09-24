@@ -7,7 +7,7 @@ namespace PaginatorBundle\Paginator;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Class OffsetPaginator
+ * Class OffsetPaginator.
  */
 class OffsetPaginator implements OffsetPaginatorInterface
 {
@@ -25,9 +25,6 @@ class OffsetPaginator implements OffsetPaginatorInterface
 
     /**
      * OffsetPaginator constructor.
-     *
-     * @param int $offset
-     * @param int $limit
      */
     public function __construct(int $offset, int $limit)
     {
@@ -35,34 +32,22 @@ class OffsetPaginator implements OffsetPaginatorInterface
         $this->limit = $limit;
     }
 
-    /**
-     * @return int
-     */
     public function getOffset(): int
     {
         return $this->offset;
     }
 
-    /**
-     * @return int
-     */
     public function getLimit(): int
     {
         return $this->limit;
     }
 
-    /**
-     * @param PaginatableInterface $collection
-     */
     public function paginate(PaginatableInterface $collection): void
     {
         $collection->setOffset($this->getOffset());
         $collection->setLimit($this->getLimit());
     }
 
-    /**
-     * @return array
-     */
     public function serialize(): array
     {
         return [

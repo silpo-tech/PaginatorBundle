@@ -7,7 +7,7 @@ namespace PaginatorBundle;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * PaginatorBundle
+ * PaginatorBundle.
  */
 class PaginatorBundle extends Bundle
 {

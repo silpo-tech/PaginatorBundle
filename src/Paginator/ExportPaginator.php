@@ -7,7 +7,7 @@ namespace PaginatorBundle\Paginator;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Class ExportPaginator
+ * Class ExportPaginator.
  */
 class ExportPaginator extends OffsetPaginator
 {

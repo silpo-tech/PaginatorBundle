@@ -22,7 +22,7 @@ class PagePaginatorValueResolver implements ValueResolverInterface
     public function resolve(Request $request, ArgumentMetadata $argument): iterable
     {
         $argumentType = $argument->getType();
-        if (!is_subclass_of($argumentType, PagePaginator::class) || !($argumentType === PagePaginator::class)) {
+        if (!is_subclass_of($argumentType, PagePaginator::class) || !(PagePaginator::class === $argumentType)) {
             return [];
         }
 
