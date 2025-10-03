@@ -6,7 +6,7 @@
   "require": {
     "php": ">=8.2",
     "symfony/validator": "^6.2|^7.0",
-    "silpo-tech/exception-handler-bundle": "^1.0",
+    "silpo-tech/exception-handler-bundle": "^2.0",
     "symfony/framework-bundle": "^6.2 || ^7.0",
     "symfony/yaml": "^6.2 || ^7.0"
   },
