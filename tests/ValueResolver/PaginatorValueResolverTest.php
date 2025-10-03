@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace App\Tests\ValueResolver;
 
-use ArrayIterator;
-use Exception;
 use ExceptionHandlerBundle\Exception\ValidationException;
 use PaginatorBundle\Paginator\OffsetPaginator;
 use PaginatorBundle\Paginator\PagePaginator;
@@ -18,7 +16,6 @@ use Symfony\Component\HttpKernel\Controller\ValueResolverInterface;
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
 use Symfony\Component\Validator\ConstraintViolationList;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
-use Throwable;
 
 class PaginatorValueResolverTest extends TestCase
 {
@@ -28,18 +25,17 @@ class PaginatorValueResolverTest extends TestCase
         string $paginatorClass,
         int $defaultLimit,
         array $requestParams = [],
-        int|null $expectedLimit = null,
-        int|null $expectedOffset = null,
-        int|null $expectedPage = null,
+        ?int $expectedLimit = null,
+        ?int $expectedOffset = null,
+        ?int $expectedPage = null,
         bool $expectedEmpty = false,
         bool $expectedValidationException = false,
-    ): void
-    {
+    ): void {
         if ($expectedValidationException) {
             $validator = $this->createMock(ValidatorInterface::class);
             $constraintViolationList = $this->createMock(ConstraintViolationList::class);
             $constraintViolationList->method('count')->willReturn(1);
-            $constraintViolationList->method('getIterator')->willReturn(new ArrayIterator([]));
+            $constraintViolationList->method('getIterator')->willReturn(new \ArrayIterator([]));
 
             $validator->method('validate')->willReturn($constraintViolationList);
         } else {
@@ -91,7 +87,7 @@ class PaginatorValueResolverTest extends TestCase
             'defaultLimit' => 50,
             'requestParams' => [
                 'limit' => 20,
-                'offset' => 10
+                'offset' => 10,
             ],
             'expectedLimit' => 20,
             'expectedOffset' => 10,
@@ -110,7 +106,7 @@ class PaginatorValueResolverTest extends TestCase
             'defaultLimit' => 50,
             'requestParams' => [
                 'limit' => 20,
-                'offset' => 10
+                'offset' => 10,
             ],
             'expectedValidationException' => true,
         ];
@@ -131,7 +127,7 @@ class PaginatorValueResolverTest extends TestCase
             'defaultLimit' => 50,
             'requestParams' => [
                 'limit' => 20,
-                'offset' => 2
+                'offset' => 2,
             ],
             'expectedLimit' => 20,
             'expectedOffset' => 20,
@@ -151,7 +147,7 @@ class PaginatorValueResolverTest extends TestCase
             'defaultLimit' => 50,
             'requestParams' => [
                 'limit' => 20,
-                'offset' => 10
+                'offset' => 10,
             ],
             'expectedValidationException' => true,
         ];
